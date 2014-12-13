@@ -12,7 +12,7 @@
                    :del :del
                    :incr :incr}
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [com.google.appengine/appengine-api-1.0-sdk "1.9.14"]
+                 [com.google.appengine/appengine-api-1.0-sdk "1.9.17"]
                  ;; [log4j "1.2.17" :exclusions [javax.mail/mail
                  ;;                              javax.jms/jms
                  ;;                              com.sun.jdmk/jmxtools
