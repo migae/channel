@@ -7,7 +7,7 @@
             ChannelMessage]
            [javax.servlet.http ;; HttpServlet
             HttpServletRequest]
-            ;;HttpServletResponse
+           ;;HttpServletResponse
            ))
 
 (defonce ^{:dynamic true} *channel-service* (atom nil))
@@ -21,7 +21,7 @@
 
 (defn create-channel
   "Creates a channel associated with the provided clientId and returns a token that is valid for the specified period of time (default: 2 hours)."
-  [^String client-id & ^int duration]
+  [^String client-id & duration]
   (.createChannel (get-channel-service) client-id))
 
 (defn parse-message
@@ -37,9 +37,9 @@ This method should only be called within a channel webhook."
     (ClientStatus. (.clientId presence-obj)
                    (if (.isConnected presence-obj) :connected :disconnected))))
 
-Presence:
-  String clientId()
-  boolean isConnected()
+;; Presence:
+  ;; String clientId()
+  ;; boolean isConnected()
 
 ;; (defn make-message [^String client-id, ^String message]
 ;;   (ChannelMessage. client-id message))
@@ -48,5 +48,5 @@ Presence:
   ([^ChannelMessage message]
      (.sendMessage (get-channel-service) message))
   ([^String client-id, ^String message]
-     (send-message (ChennelMessage. client-id message))))
+     (send-message (ChannelMessage. client-id message))))
 
