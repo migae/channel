@@ -1,3 +1,5 @@
+ignore/
+
 # -*- mode: gitignore; -*-
 *~
 \#*\#
@@ -16,17 +18,17 @@ tramp
 *_flymake.*
 
 # eshell files
-/eshell/history
-/eshell/lastdir
+eshell/history
+eshell/lastdir
 
 # elpa packages
-/elpa/
+elpa/
 
 # reftex files
 *.rel
 
 # AUCTeX auto folder
-/auto/
+auto/
 
 # cask packages
 .cask/
@@ -35,9 +37,9 @@ tramp
 pom.xml
 pom.xml.asc
 *jar
-/classes/
-/target/
-/checkouts/
+classes/
+target/
+checkouts/
 .lein-deps-sum
 .lein-repl-history
 .lein-plugins/
