@@ -14,7 +14,7 @@
 
 (defrecord ClientStatus [id status])
 
-(defn- get-channel-service []
+(defn get-channel-service []
   (when (nil? @*channel-service*)
     (reset! *channel-service* (ChannelServiceFactory/getChannelService)))
   @*channel-service*)
